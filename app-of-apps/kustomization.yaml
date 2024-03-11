@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: delighted-jackal-python 
+  janus-idp.io/tekton: delighted-jackal-python
+  backstage.io/kubernetes-id: delighted-jackal-python
+  backstage.io/kubernetes-namespace: rhtap-integ 
+  app.kubernetes.io/part-of: delighted-jackal-python
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
